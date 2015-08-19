@@ -18,7 +18,7 @@ Meteor.startup(function(){
 	      slug:'my-second-entry',
 	      description:'Borem ipsum dolor sit.',
 	      text:	'Lorem	ipsum	dolor	sit	amet...',
-	      timeCreated:moment().subtract(6,'days').unix(),
+	      timeCreated:moment().subtract(5,'days').unix(),
 	      author:	'John	Doe'
 	      },
               {
@@ -34,7 +34,7 @@ Meteor.startup(function(){
 	      slug:'my-second-entry',
 	      description:'Borem ipsum dolor sit.',
 	      text:	'Lorem	ipsum	dolor	sit	amet...',
-	      timeCreated:moment().subtract(2,'days').unix(),
+	      timeCreated:moment().subtract(5,'days').unix(),
 	      author:	'John	Doe'
 	      }
               
