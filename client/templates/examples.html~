@@ -1,0 +1,20 @@
+<template name="contextExample">
+   {{#with dataContextHelper}}
+     <p>{{someNested.text}}</p>
+     <p>{{someText}}</p>
+     <p>{{logContext}}</p>
+   {{/with}}
+   <button>Get some random number</button>
+   
+</template>
+
+<template name="blockHelperExample">
+   <div>
+      <h1>My block helper</h1>
+      {{#if myValue}}
+         <p>content goes here : {{> Template.contentBlock}}</p>
+      {{else}}
+         <p>else content here: {{> Template.elseBlock}}</p>
+      {{/if}}
+  </div>
+</template>

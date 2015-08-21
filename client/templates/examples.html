@@ -1,0 +1,12 @@
+
+
+<template name="blockHelperExample">
+   <div>
+      <h1>My block helper</h1>
+      {{#if myValue}}
+         <p>content goes here : {{> Template.contentBlock}}</p>
+      {{else}}
+         <p>else content here: {{> Template.elseBlock}}</p>
+      {{/if}}
+  </div>
+</template>

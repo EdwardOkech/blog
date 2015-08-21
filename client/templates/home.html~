@@ -3,8 +3,7 @@
 ## Welcome to my Blog
 Here I'm talking about my latest discoveries from the perspective of Dr.Odheru.
 {{/markdown}}
-<!--we call the roles property to enable only thr admin to view the create post button--> 
-{{#if currentUser.roles.admin}}
+{{#if currentUser}}
    <a href="/create-post" class="createNewPost"> Create new post</a>
 {{/if}}
 {{#each postsList}}

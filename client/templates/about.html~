@@ -1,0 +1,13 @@
+<template name="about">
+{{#markdown}}
+## About me
+I AM THE GUY YOUR PARENTS WARNED YOU ABOUT....am a 3rd generation anarchist. Who consume gargantuan quantities of pot, hash, acid and peyote, hasn't had an unhal-lucinated day since 1985. Easy to arouse, hard to pacify and most people prefer to just go away. some say am a verb, but i think am a gerund.
+
+/*
+ *I blog about my various endeavors around the world fighting terrorism and abolition of stupidity.....!!
+ *
+ ****************************************************#PERIOD#******************************************!!	
+ *****************[ You can follow me on twitter @okechedward ]****************************************!!
+ */
+{{/markdown}}
+</template>
