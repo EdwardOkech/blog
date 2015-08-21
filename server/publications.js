@@ -23,3 +23,15 @@ Meteor.publish('lazyload-posts', function(limit){
       sort: {timeCreated: -1}
     });
  });
+Meteor.publish("single-post", function(slug){
+   return Posts.find({slug: slug});
+});
+
+//publication to access roles property on the client
+Meteor.publish("userRoles", function(){
+   if(this.userId){
+      return Meteor.users.find({_id: this.userId}, {fields: {roles: 1}});
+   } else {
+      this.ready();
+   }
+});

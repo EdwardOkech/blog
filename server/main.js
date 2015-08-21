@@ -1,5 +1,23 @@
 Meteor.startup(function(){
 
+   //creating out admin user
+   if(Meteor.users.find().count() === 0){ //check if the users collection is empty
+        console.log('Created Admin user'); 
+
+         var userId = Accounts.createUser({
+             username: 'admin',
+             email: 'okech.edward@reactivestudio.co.ke',
+             password: 'admin',
+             profile: {
+                 name : 'Edward Okech'
+             }
+         });
+        // add user roles
+        Meteor.users.update(userId, {$set: {
+             roles: {admin: true},
+        }});
+    }
+
     console.log('Server	started');
     //#Storing Data -> Adding post examples
     if(Posts.find().count() ===	0)	{

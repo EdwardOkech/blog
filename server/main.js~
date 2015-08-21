@@ -1,5 +1,19 @@
 Meteor.startup(function(){
 
+   //creating out admin user
+   if(Meteor.users.find().count() === 0){ //check if the users collection is empty
+        console.log('Created Admin user'); 
+
+        Accounts.createUser({
+             username: 'admin',
+             email: 'okech.edward@reactivestudio.co.ke',
+             password: 'admin',
+             profile: {
+                 name : 'Edward Okech'
+             }
+         });
+    }
+
     console.log('Server	started');
     //#Storing Data -> Adding post examples
     if(Posts.find().count() ===	0)	{
@@ -18,7 +32,7 @@ Meteor.startup(function(){
 	      slug:'my-second-entry',
 	      description:'Borem ipsum dolor sit.',
 	      text:	'Lorem	ipsum	dolor	sit	amet...',
-	      timeCreated:moment().subtract(5,'days').unix(),
+	      timeCreated:moment().subtract(6,'days').unix(),
 	      author:	'John	Doe'
 	      },
               {
@@ -34,7 +48,7 @@ Meteor.startup(function(){
 	      slug:'my-second-entry',
 	      description:'Borem ipsum dolor sit.',
 	      text:	'Lorem	ipsum	dolor	sit	amet...',
-	      timeCreated:moment().subtract(5,'days').unix(),
+	      timeCreated:moment().subtract(2,'days').unix(),
 	      author:	'John	Doe'
 	      }
               
